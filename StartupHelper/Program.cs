@@ -17,15 +17,17 @@ namespace StartupHelper
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            int monCount = DetectMonitorCount();
-            if (monCount != 2)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                Application.Run(new StartupHelperForm());
-            }
+            Application.Run(new DetectTest());
+
+            //int monCount = DetectMonitorCount();
+            //if (monCount != 2)
+            //{
+            //    Application.Exit();
+            //}
+            //else
+            //{
+            //    Application.Run(new StartupHelperForm());
+            //}
         }
 
         private static int DetectMonitorCount()
